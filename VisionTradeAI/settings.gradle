@@ -1,0 +1,2 @@
+rootProject.name = "VisionTradeAI"
+include ':app'
