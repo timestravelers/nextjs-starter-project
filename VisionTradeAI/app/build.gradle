@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    namespace 'com.visiontrade.ai'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.visiontrade.ai"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-ktx:1.6.1'
+
+    // CameraX dependencies
+    implementation "androidx.camera:camera-camera2:1.1.0"
+    implementation "androidx.camera:camera-lifecycle:1.1.0"
+    implementation "androidx.camera:camera-view:1.2.0-alpha01"
+
+    // MPAndroidChart for chart visualization
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // TensorFlow Lite for AI models
+    implementation 'org.tensorflow:tensorflow-lite:2.11.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.11.0'
+
+    // PDF generation
+    implementation 'com.itextpdf:itext7-core:7.2.3'
+
+    // Other dependencies can be added as needed
+}
